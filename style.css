@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Zen+Maru+Gothic:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #f6f5f1;
+  --ink: #44433f;
+  --muted: #99968e;
+  --line: #deddd6;
+  --pink: #d9aebc;
+  --pink-soft: #f0dce2;
+  --blue-soft: #dce8e8;
+  --white: #fffdf9;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 300;
+  line-height: 1.9;
+}
+a { color: inherit; }
+.site-header {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font-family: 'Kosugi Maru', sans-serif; font-size: 22px; }
+nav { display: flex; gap: 22px; font-size: 13px; }
+nav a { text-decoration: none; }
+.hero {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 90px 24px 120px;
+}
+.sparkles { color: var(--pink); letter-spacing: 7px; margin-bottom: 28px; }
+.eyebrow, .section-number, .track-label {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: .16em;
+}
+h1, h2, h3 {
+  font-family: 'Kosugi Maru', sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+}
+h1 { font-size: clamp(30px, 5vw, 52px); margin: 12px 0 22px; }
+h2 { font-size: 28px; margin: 8px 0 18px; }
+h3 { font-size: 20px; margin: 3px 0 8px; }
+.lead { font-size: 15px; }
+.scroll-link { display: inline-block; margin-top: 30px; text-decoration: none; font-size: 13px; }
+.section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  border-top: 1px solid var(--line);
+}
+.section-lead { color: var(--muted); }
+.track-card {
+  margin-top: 30px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+.track-symbol {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--pink-soft);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  flex: 0 0 auto;
+}
+.track-info { flex: 1; }
+.track-info p { margin: 0 0 5px; }
+audio { width: 100%; margin-top: 18px; }
+#games { background: var(--blue-soft); border-top: none; border-radius: 28px; margin-top: 30px; }
+.contact-link { text-decoration: none; border-bottom: 1px solid currentColor; }
+footer {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 35px 24px 55px;
+  color: var(--muted);
+  font-size: 11px;
+}
+@media (max-width: 640px) {
+  .site-header { align-items: flex-start; gap: 20px; }
+  nav { gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+  .hero { padding-top: 55px; }
+  .track-card { flex-direction: column; }
+}
